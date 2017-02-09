@@ -17,6 +17,7 @@ const PATHS = {
 
 process.env.BABEL_ENV = TARGET;
 
+
 const common = merge(
   {
     // Entry accepts a path or an object of entries.
@@ -102,7 +103,7 @@ switch(TARGET) {
       parts.devServer({
         // Customize host/port here if needed
         host: process.env.HOST,
-        port: process.env.PORT,
+        port: 9000,  //process.env.PORT,
         poll: ENABLE_POLLING
       }),
       parts.enableReactPerformanceTools(),
